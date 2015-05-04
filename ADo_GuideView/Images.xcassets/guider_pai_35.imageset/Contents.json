@@ -2,13 +2,9 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "guider_pai_35.png"
+      "scale" : "1x"
     },
     {
-      "scale" : "2x",
-      "idiom" : "universal",
-      "filename" : "guider_pai_35@2x.png",
       "resizing" : {
         "mode" : "9-part",
         "center" : {
@@ -17,17 +13,19 @@
           "height" : 1
         },
         "capInsets" : {
-          "left" : 1164,
+          "bottom" : 1165,
           "top" : 1164,
           "right" : 1165,
-          "bottom" : 1165
+          "left" : 1164
         }
-      }
+      },
+      "idiom" : "universal",
+      "filename" : "guider_pai_35@2x.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "guider_pai_35@3x.png"
+      "scale" : "3x"
     }
   ],
   "info" : {
