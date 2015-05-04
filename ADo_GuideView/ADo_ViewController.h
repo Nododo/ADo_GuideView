@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ADo_ViewController.h
 //  ADo_GuideView
 //
 //  Created by dwx on 15/5/1.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ADo_ViewController : UIViewController
 
 @end
-

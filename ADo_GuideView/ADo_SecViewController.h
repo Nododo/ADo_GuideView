@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  SecViewController.h
 //  ADo_GuideView
 //
 //  Created by dwx on 15/5/1.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface ADo_SecViewController : UIViewController
 
 @end
-

@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		9D31E00B1AF3900500DFBE88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D31E00A1AF3900500DFBE88 /* main.m */; };
 		9D31E00E1AF3900500DFBE88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D31E00D1AF3900500DFBE88 /* AppDelegate.m */; };
-		9D31E0111AF3900500DFBE88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D31E0101AF3900500DFBE88 /* ViewController.m */; };
 		9D31E0141AF3900500DFBE88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D31E0121AF3900500DFBE88 /* Main.storyboard */; };
-		9D31E0161AF3900500DFBE88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D31E0151AF3900500DFBE88 /* Images.xcassets */; };
 		9D31E0191AF3900500DFBE88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D31E0171AF3900500DFBE88 /* LaunchScreen.xib */; };
 		9D31E0251AF3900500DFBE88 /* ADo_GuideViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D31E0241AF3900500DFBE88 /* ADo_GuideViewTests.m */; };
+		9D31E0301AF390A000DFBE88 /* ADo_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D31E02F1AF390A000DFBE88 /* ADo_ViewController.m */; };
+		9D31E0581AF3B3D200DFBE88 /* ADo_SecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D31E0571AF3B3D200DFBE88 /* ADo_SecViewController.m */; };
+		EBD52F3C1AF70DB9002AF385 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD52F3B1AF70DB9002AF385 /* Images.xcassets */; };
+		EBD52F431AF716A6002AF385 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD52F421AF716A6002AF385 /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		9D31E00A1AF3900500DFBE88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9D31E00C1AF3900500DFBE88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9D31E00D1AF3900500DFBE88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9D31E00F1AF3900500DFBE88 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9D31E0101AF3900500DFBE88 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9D31E0131AF3900500DFBE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9D31E0151AF3900500DFBE88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9D31E0181AF3900500DFBE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9D31E01E1AF3900500DFBE88 /* ADo_GuideViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADo_GuideViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D31E0231AF3900500DFBE88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D31E0241AF3900500DFBE88 /* ADo_GuideViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADo_GuideViewTests.m; sourceTree = "<group>"; };
+		9D31E02E1AF390A000DFBE88 /* ADo_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADo_ViewController.h; sourceTree = "<group>"; };
+		9D31E02F1AF390A000DFBE88 /* ADo_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADo_ViewController.m; sourceTree = "<group>"; };
+		9D31E0561AF3B3D200DFBE88 /* ADo_SecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADo_SecViewController.h; sourceTree = "<group>"; };
+		9D31E0571AF3B3D200DFBE88 /* ADo_SecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADo_SecViewController.m; sourceTree = "<group>"; };
+		EBD52F3B1AF70DB9002AF385 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBD52F411AF716A6002AF385 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		EBD52F421AF716A6002AF385 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +89,14 @@
 			children = (
 				9D31E00C1AF3900500DFBE88 /* AppDelegate.h */,
 				9D31E00D1AF3900500DFBE88 /* AppDelegate.m */,
-				9D31E00F1AF3900500DFBE88 /* ViewController.h */,
-				9D31E0101AF3900500DFBE88 /* ViewController.m */,
+				9D31E02E1AF390A000DFBE88 /* ADo_ViewController.h */,
+				9D31E02F1AF390A000DFBE88 /* ADo_ViewController.m */,
+				9D31E0561AF3B3D200DFBE88 /* ADo_SecViewController.h */,
+				9D31E0571AF3B3D200DFBE88 /* ADo_SecViewController.m */,
+				EBD52F411AF716A6002AF385 /* UIView+Extension.h */,
+				EBD52F421AF716A6002AF385 /* UIView+Extension.m */,
+				EBD52F3B1AF70DB9002AF385 /* Images.xcassets */,
 				9D31E0121AF3900500DFBE88 /* Main.storyboard */,
-				9D31E0151AF3900500DFBE88 /* Images.xcassets */,
 				9D31E0171AF3900500DFBE88 /* LaunchScreen.xib */,
 				9D31E0081AF3900500DFBE88 /* Supporting Files */,
 			);
@@ -200,8 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D31E0141AF3900500DFBE88 /* Main.storyboard in Resources */,
+				EBD52F3C1AF70DB9002AF385 /* Images.xcassets in Resources */,
 				9D31E0191AF3900500DFBE88 /* LaunchScreen.xib in Resources */,
-				9D31E0161AF3900500DFBE88 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D31E0111AF3900500DFBE88 /* ViewController.m in Sources */,
+				EBD52F431AF716A6002AF385 /* UIView+Extension.m in Sources */,
+				9D31E0581AF3B3D200DFBE88 /* ADo_SecViewController.m in Sources */,
+				9D31E0301AF390A000DFBE88 /* ADo_ViewController.m in Sources */,
 				9D31E00E1AF3900500DFBE88 /* AppDelegate.m in Sources */,
 				9D31E00B1AF3900500DFBE88 /* main.m in Sources */,
 			);
@@ -412,6 +424,7 @@
 				9D31E02A1AF3900500DFBE88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D31E02B1AF3900500DFBE88 /* Build configuration list for PBXNativeTarget "ADo_GuideViewTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +433,7 @@
 				9D31E02D1AF3900500DFBE88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
