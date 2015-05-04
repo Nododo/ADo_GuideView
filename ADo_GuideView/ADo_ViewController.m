@@ -11,11 +11,33 @@
 #import "UIView+Extension.h"
 #define screenW self.view.frame.size.width
 #define screenH self.view.frame.size.height
+#define pageCount 5
+#define picH 2330 / 2
+#define padding 200
+#define topPicH 70
+#define topPicW 112
+#define btnH 35
+#define btnW 140
 @interface ADo_ViewController ()<UIScrollViewDelegate>
+/**
+ *  底部滚动图片
+ */
 @property (nonatomic,strong)UIScrollView *guideView;
+/**
+ *  球形图片
+ */
 @property (nonatomic,strong)UIImageView *picView;
+/**
+ *  牌型滚动
+ */
 @property (nonatomic,strong)UIImageView *paiView;
+/**
+ *  指示
+ */
 @property (nonatomic,strong)UIPageControl *pageControl;
+/**
+ *  顶部图片滚动
+ */
 @property (nonatomic,strong)UIScrollView *topView;
 @end
 
@@ -23,38 +45,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    /**
+     背景图片
+     */
     UIImageView *backView = [[UIImageView alloc]initWithFrame:self.view.frame];
     backView.image = [UIImage imageNamed:@"page_bg_35"];
-   
     [self.view addSubview:backView];
 
+    /**
+     滚动 辅助作用
+     */
     UIScrollView *ado_guideView = [[UIScrollView alloc] initWithFrame:self.view.frame];
-    ado_guideView.contentSize = CGSizeMake(screenW * 5, screenH);
+    ado_guideView.contentSize = CGSizeMake(screenW * pageCount, screenH);
     ado_guideView.bounces = NO;
     ado_guideView.pagingEnabled = YES;
     ado_guideView.delegate = self;
     ado_guideView.showsHorizontalScrollIndicator = NO;
     
-    
+    /**
+     滚动球
+     
+     */
     UIImageView *picView = [[UIImageView alloc] init];
-    picView.width = 2330 / 2.0;
-    picView.height = 2330 / 2.0;
+    picView.width = picH ;
+    picView.height = picH;
     picView.centerX = screenW / 2;
-    picView.centerY = screenH + 200;
+    picView.centerY = screenH + padding;
+#warning 设置锚点是个坑
     picView.layer.anchorPoint = CGPointMake(0.5, 0.5);
     picView.image = [UIImage imageNamed:@"guider_qiu_35"];
     
-    
+    /**
+     滚动牌
+     */
     UIImageView *paiView = [[UIImageView alloc] init];
-    paiView.width = 2330 / 2.0;
-    paiView.height = 2330 / 2.0;
+    paiView.width = picH;
+    paiView.height = picH;
     paiView.centerX = screenW / 2 ;
-    paiView.centerY = screenH + 200;
+    paiView.centerY = screenH + padding;
     paiView.layer.anchorPoint = CGPointMake(0.5, 0.5);
     paiView.image = [UIImage imageNamed:@"guider_pai_35"];
     
-    
+    /**
+     指示器
+     */
     UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(screenW / 2 - 50, screenH - 20, 100, 20)];
     pageControl.numberOfPages = 5;
     pageControl.currentPage = 0;
@@ -62,15 +96,17 @@
     pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     [backView addSubview:pageControl];
     
-    
-    UIScrollView *topView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 20, screenW, 70)];
-    topView.contentSize = CGSizeMake(screenW * 5, 70);
+    /**
+     顶部滚动图片
+     */
+    UIScrollView *topView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 20, screenW, topPicH)];
+    topView.contentSize = CGSizeMake(screenW * pageCount, topPicH);
     topView.bounces = NO;
     topView.pagingEnabled = YES;
-    for (int i = 0; i < 5; i ++) {
+    for (int i = 0; i < pageCount; i ++) {
         UIImageView *topPic =  [[UIImageView alloc] init];
-        topPic.width = 112;
-        topPic.height = 70;
+        topPic.width = topPicW;
+        topPic.height = topPicH;
         topPic.centerX = i * screenW + screenW / 2;
         topPic.y = 0;
         NSString *picName = [NSString stringWithFormat:@"page_top_%d",i];
@@ -90,7 +126,10 @@
 
 }
 
-
+/**
+ *  模态到下个页面
+ *
+ */
 - (void)go2MainVC:(UIButton *)btn
 {
     ADo_SecViewController *secVC = [[ADo_SecViewController alloc] init];
@@ -98,6 +137,9 @@
     [self presentViewController:secVC animated:YES completion:nil];
 }
 
+/**
+ *  scrollView代理方法
+ */
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     float offSetX = scrollView.contentOffset.x;
@@ -107,7 +149,7 @@
     
    
     if (self.pageControl.currentPage == 4) {
-        UIButton *nextBtn = [[UIButton alloc] initWithFrame:CGRectMake(screenW / 2  + offSetX - 70, screenH - 121, 140, 35)];
+        UIButton *nextBtn = [[UIButton alloc] initWithFrame:CGRectMake(screenW / 2  + offSetX - btnW / 2, screenH - 121, btnW, btnH)];
         [nextBtn addTarget:self action:@selector(go2MainVC:) forControlEvents:UIControlEventTouchUpInside];
         nextBtn.backgroundColor = [UIColor clearColor];
         [scrollView addSubview:nextBtn];
